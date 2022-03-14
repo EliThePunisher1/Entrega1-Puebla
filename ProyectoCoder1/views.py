@@ -11,3 +11,18 @@ def Plantilla(request):
     context=Context()
     plantilla_1=template.render(context)
     return HttpResponse(plantilla_1)
+
+
+def Perfil1(request):
+    return HttpResponse("Perfil1")
+
+
+def Perfil2(request):
+    return HttpResponse("Perfil2")
+
+
+def Perfil3(request):
+    return HttpResponse("Perfil3")
+
+def Perfil4(request):
+    return HttpResponse("Perfil4")
