@@ -76,3 +76,10 @@ def Contacto(request):
     context4=Context()
     Contacto1=template4.render(context4)
     return HttpResponse(Contacto1)
+
+def BasePadre(request):
+    plantillaBasePadre1=open(r'C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\BasePadre.html')
+    template5=Template(plantillaBasePadre1.read())
+    context5=Context()
+    BasePadre1=template5.render(context5)
+    return HttpResponse(BasePadre1)
