@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario</title>
-</head>
-<body>
-    <form action="AppCoder1/Templates1/AppCoder11/Formulario.html" method="post">
-         
-        <p><input placeholder="Nombre" type="text" name="Usuario"></p>
-        {% csrf token %}
-        <p><input placeholder="Contraseña" type="text" name="Contraseña"></p>
-        <input type="submit" value="Enviar">
-    </form>
-</body> 
-</html>
+{% extends "C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Inicio.html" %}
+
+{% load static %}
+{% block titulos %}
+
+<title>Formulario</title>
+
+{% if miformulario.errors %}
+
+<p style="color: red">Estan mal los datos, revisar!</p>
+
+{% endif %}
+
+<form action="" method="POST">{% csrf token %}
+
+    <table>
+    
+        {{miformulario.as_table}}
+
+    </table>
+
+    <p><input placeholder="Nombre" type="text" name="Usuario"></p>
+    <p><input placeholder="Contraseña" type="text" name="Contraseña"></p>
+    <input type="submit" value="Enviar">
+</form>
+{%endblock titulos%}

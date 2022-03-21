@@ -1,7 +1,0 @@
-Nuestro proyecto se va a llamar "ProyectoCoder1"
-Nos vamos a encargar de formar una pagina web con django, estilo blog, donde la gente pueda leer, acceder 
-a varias partes de la pagina como Inicio, Sobre nosotros?, Contacto,etc,etc.
-Tambien se tiene que poder registrar con nombre apellido y contraseña.
-
-Carpetas
-AppCoder1: Esta carpeta contiene la parte estetica de la pagina

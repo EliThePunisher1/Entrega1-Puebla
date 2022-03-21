@@ -45,7 +45,12 @@ def Contacto(request):
     Contacto1=template4.render(context4)
     return HttpResponse(Contacto1)
 
-
+def Login(request):
+    plantillalogin1=open(r"C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Login.html")
+    template6=Template(plantillalogin1.read())
+    context6=Context()
+    Login1=template6.render(context6)
+    return HttpResponse(Login1)
 
 # Formulario(request):
 # print(request.method)

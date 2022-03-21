@@ -1,2 +1,0 @@
-AppCoder1 se encarga y se va a utilizar para formar los templates
- y la parte estetica de la pagina web.

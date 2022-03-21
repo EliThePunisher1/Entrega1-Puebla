@@ -8,7 +8,6 @@ from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import Context, Template
-
 # Create your views here.
 
 def Inicio(request):
@@ -39,18 +38,39 @@ def Contacto(request):
     Contacto1=template4.render(context4)
     return HttpResponse(Contacto1)
 
-# Formulario(request):
-# print(request.method)
-# if request.method== "POST":
-#     print(request.POST)
-#     nuevo_usuario=Usuarios(nombre=request.POST['Usuario'],Contraseña=Contraseña.POST['Contraseña'])
-#     nuevo_usuario.save() 
-#     return render(request,'AppCoder/Templates/Formulario.html',{'nuevo_usuario':nuevo_usuario})
-      
-# return render(request,'AppCoder/Templates/Formulario.html',{})
+def Formulario(request):
+    if request.method== "POST":
+        nuevo_usuario=Usuarios(request.POST['Usuario'],request.POST['Contraseña'])
+        nuevo_usuario.save() 
+        return render(request,'C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Inicio.html')
+    return render(request,"C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Formulario.html")
 
-# if request.method == 'POST':
-#     print(request.POST)
+def Formulario(request):
+    if request.method=="POST":
+        miformulario=NuevosUsuarios(request.POST)
+        print(miformulario)
+        if miformulario.is_valid:
+            informacion=miformulario.cleaned_data
+            usuarios=Usuarios(nombre=informacion['usuario'],contaseña=informacion['contraseña'])
+            usuarios.save()
+            return render(request,'C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Inicio.html')
+        
+    else:
+        miformulario=NuevosUsuarios()
+        return render(request,'C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Formulario.html',{"miformulario":miformulario})
     
-# formulario= Formulario()
-# return render(request,'formulario.html',{'formulario:Formulario'})
+
+# def busquedausuarios(request):
+#     return render(request,'C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\busquedausuarios.html')
+
+def buscar(request):
+     if request.GET["usuario"]:
+         
+         usuario=request.GET["usuario"]
+         contraseña=usuario.objects.filter(usuario__icontains=usuario)
+         
+         return render(request,"C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\busquedausuarios.html",{"Usuarios":usuario, "contraseña":contraseña})
+     else:
+        respuesta="no enviaste datos"
+         
+        return HttpResponse(respuesta)
