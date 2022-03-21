@@ -5,8 +5,9 @@
 <!--[if (gt IE 9)|!(IE)]><!-->
 <html class="noIE" lang="en-US">
 <!--<![endif]-->
-	<head>
-		<title>Flusk</title>
+<head>
+		{% load static %}
+		<title>Proyecto Bike</title>
 
 		<!-- meta -->
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,9 +22,9 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Alegreya+SC:regular,italic,bold,bolditalic"/>
 		
 		<!-- css -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/style.css" media="screen"/>
+		<link rel="stylesheet" href="static 'Flusk-master/css/styles.css'"">
+		<link rel="stylesheet" href="static 'Flusk-master/css/styles.css">
+		<link rel="stylesheet" href="static 'Flusk-master/css/styles.css" media="screen"/>
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
@@ -221,6 +222,51 @@
 						</div>
 					</section>
 				</div>
+			</div><!-- #blog -->
+
+
+			<div class="content-block parallax" id="parallax">
+				<div class="container text-center">
+					<h1>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit.</h1>
+					<a href="" class="btn btn-o-white btn-lg">Get a free quote</a>
+				</div>
+			</div><!-- #parallax -->
+
+			<div class="content-block" id="testimonials">
+				<div class="container">
+					<header class="block-heading cleafix">
+						<h1>Testimonials</h1>
+						<p>Some happy customers have to say.</p>
+					</header>
+					<section class="block-body">
+						<div class="row">
+							<div class="col-md-4">
+								<div class="testimonial">
+									<img src="assets/images/testimonial_31-190x190.jpg">
+									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+									<strong>Jhon Doe</strong><br/>
+									<span>Head of Ideas, Technext</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="testimonial">
+									<img src="assets/images/testimonial_11-190x190.jpg">
+									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+									<strong>Jane Doe</strong><br/>
+									<span>CEO, Apple Inc</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="testimonial">
+									<img src="assets/images/testimonial_22-190x190.jpg">
+									<p>In at accumsan risus. Nam id volutpat ante. Etiam vel mi mattis, vulputate nunc nec, sodales nibh. Etiam nulla magna, gravida eget ultricies sit amet, hendrerit in lorem.</p>
+									<strong>Albert Doe</strong><br/>
+									<span>Team Lead, Design Studio</span>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
 			</div><!-- /#testimonials -->
 
 
@@ -275,8 +321,3 @@
 
 	</body>
 </html>
-
-{% block contenidoQueCambia %}
-....
-
-{% endblock %}

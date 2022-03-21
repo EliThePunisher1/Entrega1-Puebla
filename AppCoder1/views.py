@@ -4,12 +4,12 @@ from ctypes.wintypes import tagMSG
 from pipes import Template
 from re import template
 from tempfile import tempdir
+from urllib import request
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.template import Context, Template
 
 # Create your views here.
-
 
 def Inicio(request):
     plantillaincio1=open(r"C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\Inicio.html")
@@ -39,9 +39,18 @@ def Contacto(request):
     Contacto1=template4.render(context4)
     return HttpResponse(Contacto1)
 
-def BasePadre(request):
-    plantillaBasePadre1=open(r'C:\Users\elipu\OneDrive\Escritorio\MiproyectoCoder\AppCoder1\Templates1\AppCoder11\BasePadre.html')
-    template5=Template(plantillaBasePadre1.read())
-    context5=Context()
-    BasePadre1=template5.render(context5)
-    return HttpResponse(BasePadre1)
+# Formulario(request):
+# print(request.method)
+# if request.method== "POST":
+#     print(request.POST)
+#     nuevo_usuario=Usuarios(nombre=request.POST['Usuario'],Contraseña=Contraseña.POST['Contraseña'])
+#     nuevo_usuario.save() 
+#     return render(request,'AppCoder/Templates/Formulario.html',{'nuevo_usuario':nuevo_usuario})
+      
+# return render(request,'AppCoder/Templates/Formulario.html',{})
+
+# if request.method == 'POST':
+#     print(request.POST)
+    
+# formulario= Formulario()
+# return render(request,'formulario.html',{'formulario:Formulario'})

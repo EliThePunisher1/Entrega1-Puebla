@@ -4,11 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>SobreNosotros</title>
 </head>
+
+{%extends "static/Flusk-master/index.html" %}
+{%load static%}
+{%block base%}
+
 <body>
     <h1>Aca vamos a contar un poco sobre nosotros y el porque
-        comenzamos con este blog.
-    </h1>
+        comenzamos con este blog.</h1>
+
+        <h3>Para comenzar podemos contarles que somos un grupo de chicos de Argentina.
+            <p>Hace ya 3 años comenzamos con Proyecto Bike con el objetivo de motivar
+                a mas personas a sumar a la movida en dos ruedas </p>
+                <p>Creemos que juntos podemos hacer de este mundo un mejor lugar para todos,
+                    pero sabemos que el cambio empieza en cada uno.
+                    Por eso es que abrimos este espacio para que tanto vos como otros cientos,
+                    puedan conocer de bicis y asi elegir la que mejor va con vos!
+                </p></h3>
 </body>
+{%endblock base%}
 </html>
