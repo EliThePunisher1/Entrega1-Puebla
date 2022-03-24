@@ -12,6 +12,14 @@ class modelo2(models.Model):
     apellido=models.IntegerField()
     contraseña=models.IntegerField()
     email=models.EmailField()
+
+class modelo3(models.Model):
+    nombre=models.CharField(max_length=10)
+    apellido=models.IntegerField()
+    contraseña=models.IntegerField()
+    email=models.EmailField()
+
+    
     
     
     
