@@ -1,4 +1,5 @@
 from django.contrib import admin
+from .models import modelo1,modelo2,modelo3
 
 
 # admin.site.register(managerderedes)
@@ -8,3 +9,7 @@ from django.contrib import admin
 
 
 # Register your models here.
+
+admin.site.register(modelo1)
+admin.site.register(modelo2)
+admin.site.register(modelo3)

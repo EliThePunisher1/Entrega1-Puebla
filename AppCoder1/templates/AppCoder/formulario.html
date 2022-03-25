@@ -1,0 +1,16 @@
+{% extends "AppCoder/base.html" %}
+{% load static %}
+{% block cambio%}
+
+<title> Formulario </title>
+
+<form action="/formulario/" method="POST">
+    {% csrf_token %}
+    <p>Nombre:<input type="text" name="nombre"></p>
+    <p>Apellido:<input type="text" name="apellido"></p>
+    <p>Email:<input type="email" name="email"></p>
+    <p>Contraseña:<input type="number" name="contraseña"></p>
+<input type="submit" value="Enviar">
+</form>
+
+{% endblock cambio %}
