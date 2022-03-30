@@ -3,14 +3,26 @@
 {% block cambio%}
 
 <title> Formulario </title>
+<!--<p style="color: red;">F O R M U L A R I O</p>
 
-<form action="/formulario/" method="POST">
-    {% csrf_token %}
+<form action="/formulario/" method="POST">{% csrf_token %}
     <p>Nombre:<input type="text" name="nombre"></p>
     <p>Apellido:<input type="text" name="apellido"></p>
     <p>Email:<input type="email" name="email"></p>
     <p>Contraseña:<input type="number" name="contraseña"></p>
 <input type="submit" value="Enviar">
+</form>  -->
+
+{% if miformulario.errors %}
+<p style="color: red;">Estan mal los datos</p>
+{% endif %}
+
+<form action="" method="POST"> {% csrf_token %}
+    <table>
+        {{ formulario.as_table }}
+    </table>
+    <input type="submit",value="Enviar"> 
 </form>
+
 
 {% endblock cambio %}
