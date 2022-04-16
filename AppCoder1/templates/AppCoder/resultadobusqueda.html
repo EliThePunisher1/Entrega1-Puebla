@@ -1,0 +1,18 @@
+<title>Result Search</title>
+
+{% extends "AppCoder/base.html" %}
+{% load static %}
+{% block cambio%}
+
+<p>Estamos buscando el: {{usuario}}</p>
+{% if modelo1 %}
+
+<ul>
+{% for i in modelo1 %}
+    <li>{{i.nombre}}</li>
+    <li>{{i.usuario1}}</li>
+{% endfor %}
+</ul>
+{% endif %}
+
+{% endblock cambio %}

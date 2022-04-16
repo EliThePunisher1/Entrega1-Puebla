@@ -1,8 +1,10 @@
+<title> Formulario </title>
 {% extends "AppCoder/base.html" %}
 {% load static %}
 {% block cambio%}
 
-<title> Formulario </title>
+<h1>Esta es la pagina de <p style="color: chartreuse;"> F O R M U L A R I O</p></h1>
+
 <!--<p style="color: red;">F O R M U L A R I O</p>
 
 <form action="/formulario/" method="POST">{% csrf_token %}
@@ -12,6 +14,8 @@
     <p>Contraseña:<input type="number" name="contraseña"></p>
 <input type="submit" value="Enviar">
 </form>  -->
+<h4 style="color: rebeccapurple;">Donde dice Identificacion coloque su numero de ID</h4>
+
 
 {% if miformulario.errors %}
 <p style="color: red;">Estan mal los datos</p>

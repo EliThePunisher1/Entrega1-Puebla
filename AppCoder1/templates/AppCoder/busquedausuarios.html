@@ -1,0 +1,21 @@
+{% extends "AppCoder/base.html" %}
+{% load static %}
+{% block cambio%}
+<title>Busqueda</title>
+
+<h1>esta es la pagina de <p style="color: blue;">b u s q u e d a</p></h1>
+
+<form action={% url 'buscar1' %} method="GET"> 
+    {% csrf_token %}
+    <table>
+        {{ buscador.as_table }}
+    </table>
+    <input type="submit",value="Enviar"> 
+</form>
+{% for modelo1 in usuario_buscado %}
+<li>
+    {{modelo1}}
+</li>
+{% endfor %}
+
+{% endblock cambio %}
